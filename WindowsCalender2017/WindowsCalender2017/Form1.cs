@@ -15,6 +15,7 @@ namespace WindowsCalender2017
         public Form1()
         {
             InitializeComponent();
+            ControlBox = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -34,12 +35,17 @@ namespace WindowsCalender2017
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
             textBox1.Text = monthCalendar1.SelectionStart.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            groupBox1.Hide();
         }
     }
 }
