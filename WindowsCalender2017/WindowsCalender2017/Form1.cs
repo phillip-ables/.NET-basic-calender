@@ -24,7 +24,7 @@ namespace WindowsCalender2017
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            groupBox1.Show();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -35,6 +35,11 @@ namespace WindowsCalender2017
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            textBox1.Text = monthCalendar1.SelectionStart.ToString();
         }
     }
 }
